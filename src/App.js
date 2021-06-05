@@ -5,6 +5,7 @@ import About from './components/AboutComponent';
 import Experiences from './components/ExperiencesComponent';
 import Projects from './components/ProjectsComponent';
 import { PersonData, AboutData, ExperiencesData, ProjectsData, contactData } from './data/data';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // https://www.foliolink.com/index.asp  -  trying to follow similar design to this website
 

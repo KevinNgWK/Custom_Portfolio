@@ -1,17 +1,36 @@
 import React, { useContext, useState, useEffect } from 'react';
 import Fade from 'react-reveal/Fade';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Accordion, Card } from 'react-bootstrap';
 import NavigationBar from './NavBarComponent'
 import Title from './TitleComponent'
 
-
 const ProjectCard = (props) => {
   return (
-    <Container>
-      <p>{props.project.title}</p>
-      <p>{props.project.info}</p>
-      <p>{props.project.repo}</p>
-    </Container>
+    <Accordion>
+      <Card>
+        <Accordion.Toggle as={Card.Header} eventKey={props.index.toString()}>
+          {props.project.title}
+        </Accordion.Toggle>
+        <Accordion.Collapse eventKey={props.index.toString()}>
+          <Card.Body>
+            <Row>
+              <Col md={4}>
+                {props.project.info.map((information) => {
+                  return (
+                    <Card.Text>
+                      {information}
+                    </Card.Text>
+                  );
+                })}
+              </Col>
+              <Col md={{ span: 6, offset: 2}}>
+                Temp placeholder for images/gifs
+              </Col>
+            </Row>
+          </Card.Body>
+        </Accordion.Collapse>
+      </Card>
+    </Accordion>
   )
 }
 
@@ -20,11 +39,15 @@ const Projects = (props) => {
     <>
       <NavigationBar />
       <Title title={"Projects"} />
-      <Fade bottom duration={800} delay={200} distance="30px">
         <Container>
-          {props.projects.map((project) => <ProjectCard project={project} />)}
+          {props.projects.map((project, index) => {
+            return (
+              <Fade bottom duration={800} delay={index*400} distance="30px">
+                <ProjectCard project={project} index={index}/>
+              </Fade>
+            )
+          })}
         </Container>
-      </Fade>
     </>
 	);
 }
