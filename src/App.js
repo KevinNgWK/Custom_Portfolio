@@ -1,11 +1,11 @@
 import { BrowserRouter, Switch, Redirect, Route } from 'react-router-dom';
-import './App.css';
 import React, { useState, useEffect } from 'react';
-import About from './components/AboutComponent';
-import Experiences from './components/ExperiencesComponent';
-import Projects from './components/ProjectsComponent';
+import About from './components/About';
+import Experiences from './components/Experiences';
+import Projects from './components/Projects';
 import { PersonData, AboutData, ExperiencesData, ProjectsData, contactData } from './data/data';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './style/App.css';
 
 // https://www.foliolink.com/index.asp  -  trying to follow similar design to this website
 

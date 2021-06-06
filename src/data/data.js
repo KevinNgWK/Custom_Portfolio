@@ -36,7 +36,32 @@ export const ExperiencesData = [
         ],
         startDate: 'Jan 2021',
         endDate: 'May 2021'
-    }
+    },
+    {
+        id: 3,
+        img: '',
+        company: 'DSO National Laboratories',
+        position: 'Machine Learning Intern',
+        descriptions: [
+            "Investigated the applications of Deep Reinforcement Learning in the field of Robotics",
+            "Built custom environments on Unity and Python to visualize agents for training",
+            "Implemented and fine-tuned knowledge-based vessel traffic forecasting algorithm",
+        ],
+        startDate: 'Aug 2020',
+        endDate: 'Jan 2021'
+    },
+    {
+        id: 4,
+        img: '',
+        company: 'DBS Bank',
+        position: 'Software Engineer Intern',
+        descriptions: [
+            "Built a fully functional front-end website using React framework",
+            "Led discussions with selected interviewees to provide insights to iteratively improve on product"
+        ],
+        startDate: 'Jan 2021',
+        endDate: 'May 2021'
+    },
 ]
 
 export const ProjectsData = [

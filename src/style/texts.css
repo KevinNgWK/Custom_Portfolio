@@ -1,0 +1,28 @@
+.Card-main-header-text {
+    color: black;
+    font-size: 1.5vw;
+    text-align: left; 
+    margin: 1vh 0 0.1vh 0.5vw;
+}
+
+.Card-sub-header-text {
+    color: black;
+    font-size: 1.2vw;
+    text-align: left; 
+    margin: 0.1vh 0 1vh 0.5vw;
+}
+
+.Card-body-information-text {
+    color: black;
+    font-size: 1vw;
+    text-align: left;
+}
+
+.Title-text {
+    color: black;
+    font-size: 3vw;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 2vh 0 8vh 0;
+}

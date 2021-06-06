@@ -1,13 +1,13 @@
 import React, { useContext, useState, useEffect } from 'react';
 import Fade from 'react-reveal/Fade';
 import { Container, Row, Col, Accordion, Card, Button } from 'react-bootstrap';
-import NavigationBar from './NavBarComponent'
-import Title from './TitleComponent'
+import NavigationBar from './NavBar'
+import Title from './Title'
 import logo from '../data/images/GitHub-Mark-Light-32px.png'
 
 const ProjectCard = (props) => {
   return (
-    <Accordion>
+    <Accordion defaultActiveKey={"0"}>
       <Card>
         <Accordion.Toggle as={Card.Header} eventKey={props.index.toString()}>
           {props.project.title}

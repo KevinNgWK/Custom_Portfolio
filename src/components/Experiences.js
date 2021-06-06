@@ -1,22 +1,24 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React from 'react';
 import Fade from 'react-reveal/Fade';
 import { Container, Row, Col, Accordion, Card } from 'react-bootstrap';
-import NavigationBar from './NavBarComponent'
-import Title from './TitleComponent'
+import NavigationBar from './NavBar'
+import Title from './Title'
+import '../style/texts.css'
 
 const ExperienceCard = (props) => {
   return (
-    <Accordion>
+    <Accordion defaultActiveKey={"0"}>
       <Card>
         <Accordion.Toggle as={Card.Header} eventKey={props.index.toString()}>
-          {props.experience.company}
+          <h4 className="Card-main-header-text">{props.experience.company}</h4>
+          <h4 className="Card-sub-header-text">{props.experience.position}</h4>
         </Accordion.Toggle>
         <Accordion.Collapse eventKey={props.index.toString()}>
           <Card.Body>
             {props.experience.descriptions.map((description) => {
               return (
                 <Card.Text>
-                  {description}
+                  <h4 className="Card-body-information-text">{description}</h4>
                 </Card.Text>
               );
             })}

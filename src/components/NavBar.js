@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { matchPath, withRouter } from 'react-router';
-import '../style/NavBarStyle.css'
+import '../style/NavBar.css'
 
 
 const ActiveNavigationBarOption = (props) => {
