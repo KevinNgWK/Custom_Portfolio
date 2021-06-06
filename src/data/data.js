@@ -67,17 +67,17 @@ export const ExperiencesData = [
 export const ProjectsData = [
     {
         id: 1,
-        img: '',
+        img: 'assets/images/random_image.jpg',
         title: 'Sorting Algorithm Visualizer',
         info: [
-            'Built Python/Pygame application for visualizing sorting algorithms',
-            'Implemented Quick Sort'
+            'This personal project aims to help others better understand sorting algorithms through visually appealing animations.',
+            'It is built using a simple Python library, Pygame. Currently, only Quick Sort has been implemented. However, the sorting algorithms can be easily added',
         ],
         repo: 'https://github.com/KevinNgWK/Sorting_visualiser',
     },
     {
         id: 2,
-        img: '',
+        img: 'assets/images/random_image2.jpg',
         title: 'Closest Path Visualizer',
         info: [
             'Built Python/Pygame applicationf for visualizing pathfinding algorithms',

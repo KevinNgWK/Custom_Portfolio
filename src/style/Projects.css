@@ -1,0 +1,22 @@
+.Project-body-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Button-text {
+    font-size: 1vw;
+    text-align: center; 
+}
+
+.Button-Image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.Button-container {
+    text-align: left;
+    margin: 3vh 0 3vh 1vw;
+}
