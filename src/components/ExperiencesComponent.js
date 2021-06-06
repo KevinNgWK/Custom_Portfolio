@@ -1,17 +1,29 @@
 import React, { useContext, useState, useEffect } from 'react';
 import Fade from 'react-reveal/Fade';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Accordion, Card } from 'react-bootstrap';
 import NavigationBar from './NavBarComponent'
 import Title from './TitleComponent'
 
 const ExperienceCard = (props) => {
   return (
-    <Container>
-      <p>{props.experience.company}</p>
-      <p>{props.experience.position}</p>
-      <p>{props.experience.startDate}</p>
-      <p>{props.experience.endDate}</p>
-    </Container>
+    <Accordion>
+      <Card>
+        <Accordion.Toggle as={Card.Header} eventKey={props.index.toString()}>
+          {props.experience.company}
+        </Accordion.Toggle>
+        <Accordion.Collapse eventKey={props.index.toString()}>
+          <Card.Body>
+            {props.experience.descriptions.map((description) => {
+              return (
+                <Card.Text>
+                  {description}
+                </Card.Text>
+              );
+            })}
+          </Card.Body>
+        </Accordion.Collapse>
+      </Card>
+    </Accordion>
   )
 }
 
@@ -19,12 +31,16 @@ const Experiences = (props) => {
 	return(
     <>
       <NavigationBar />
-      <Title title={"Experiences"} />
-      <Fade bottom duration={800} delay={200} distance="30px">
-        <Container>
-          {props.experiences.map((experience) => <ExperienceCard experience={experience} />)}
-        </Container>
-      </Fade>
+      <Container>
+        <Title title={"Experiences"} />
+        {props.experiences.map((experience, index) => {
+          return(
+            <Fade bottom duration={800} delay={index*400 + 200} distance="30px">
+              <ExperienceCard experience={experience} index={index} />
+            </Fade>
+          )
+        })}
+      </Container>
     </>
 	);
 }

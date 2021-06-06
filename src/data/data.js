@@ -24,6 +24,18 @@ export const ExperiencesData = [
         ],
         startDate: 'May 2021',
         endDate: 'Present',
+    },
+    {
+        id: 2,
+        img: '',
+        company: 'Shopee',
+        position: 'Data Analyst Intern',
+        descriptions: [
+            "Developed Python, Airflow and Bash scripts to automate financial report generation process, ensuring Shopee sellers can make informed decisions promptly",
+            "Employed virtual environments to manage dependencies of various scripts"
+        ],
+        startDate: 'Jan 2021',
+        endDate: 'May 2021'
     }
 ]
 
