@@ -1,24 +1,22 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-import { Container, Row, Col, Accordion, Card } from 'react-bootstrap';
-import NavigationBar from './NavBar'
+import { Container, Accordion, Card } from 'react-bootstrap';
 import Title from './Title'
-import '../style/texts.css'
 
 const ExperienceCard = (props) => {
   return (
-    <Accordion defaultActiveKey={"0"}>
-      <Card>
+    <Accordion>
+      <Card className="experience-wrapper__text">
         <Accordion.Toggle as={Card.Header} eventKey={props.index.toString()}>
-          <h4 className="Card-main-header-text">{props.experience.company}</h4>
-          <h4 className="Card-sub-header-text">{props.experience.position}</h4>
+          <h3 className="experience-wrapper__text-title">{props.experience.company}</h3>
+          <h3 className="experience-wrapper__text-subtitle">{props.experience.position}</h3>
         </Accordion.Toggle>
         <Accordion.Collapse eventKey={props.index.toString()}>
           <Card.Body>
             {props.experience.descriptions.map((description) => {
               return (
                 <Card.Text>
-                  <h4 className="Card-body-information-text">{description}</h4>
+                  <p><li>{description}</li></p>
                 </Card.Text>
               );
             })}
@@ -31,19 +29,20 @@ const ExperienceCard = (props) => {
 
 const Experiences = (props) => {
 	return(
-    <>
-      <NavigationBar />
+    <section id="experiences">
       <Container>
-        <Title title={"Experiences"} />
-        {props.experiences.map((experience, index) => {
-          return(
-            <Fade bottom duration={800} delay={index*400 + 200} distance="30px">
-              <ExperienceCard experience={experience} index={index} />
-            </Fade>
-          )
-        })}
+        <div className="experience-wrapper">
+          <Title title={"Experiences"} />
+          {props.experiences.map((experience, index) => {
+            return(
+              <Fade bottom duration={800} delay={index*400 + 200} distance="30px">
+                <ExperienceCard experience={experience} index={index} />
+              </Fade>
+            )
+          })}
+        </div>
       </Container>
-    </>
+    </section>
 	);
 }
 

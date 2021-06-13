@@ -1,15 +1,21 @@
+import { nanoid } from 'nanoid';
 
 // Person Data
 export const PersonData = {
     introduction: 'Hi, my name is',
     name: 'Kevin Ng',
     description: 'Welcome to my online portfolio',
+    link: 'Know More',
 }
 
 // About Data
 export const AboutData = {
     img: '', // url to image location
-    description: 'This is a temporary placeholder for description about me'
+    description: [
+        'I am passionate about both data science and backend engineering. This has led me to take on multiple internships and personal projects to deepen my understanding of the field.',
+        'I aspire to be an engineer who can make an impact on the world, and integrate new technology to peoples\' everyday lives.',
+        'This portfolio exists to showcase my projects and experience for your viewing pleasure.',
+    ]
 }
 
 export const ExperiencesData = [
@@ -66,31 +72,42 @@ export const ExperiencesData = [
 
 export const ProjectsData = [
     {
-        id: 1,
-        img: 'assets/images/random_image.jpg',
+        id: nanoid(),
+        img: 'assets/gifs/sorting_visualiser.gif',
         title: 'Sorting Algorithm Visualizer',
         info: [
             'This personal project aims to help others better understand sorting algorithms through visually appealing animations.',
-            'It is built using a simple Python library, Pygame. Currently, only Quick Sort has been implemented. However, the sorting algorithms can be easily added',
+            'It is built using a simple Python library, Pygame. Currently, only Quick Sort has been implemented. However, other sorting algorithms can be easily added.',
         ],
         repo: 'https://github.com/KevinNgWK/Sorting_visualiser',
     },
     {
-        id: 2,
-        img: 'assets/images/random_image2.jpg',
+        id: nanoid(),
+        img: 'assets/gifs/pathfinding_visualiser.gif',
         title: 'Closest Path Visualizer',
         info: [
-            'Built Python/Pygame applicationf for visualizing pathfinding algorithms',
-            "Implemented Dijkstra\'s algorithm"
+            'This personal project aims to help others better understand pathfinding algorithms through visually appealing animations.',
+            'It is built using a simple Python library, Pygame. Currently, only Dijkstra\'s algorithm has been implemented. However, other pathfinding algorithms can be easily added.',
         ],
         repo: 'https://github.com/KevinNgWK/Shortest_Path_Visualizer',
     },
+    {
+        id: nanoid(),
+        img: 'assets/gifs/snake_game.gif',
+        title: 'Game of Snake',
+        info: [
+            'This personal project was built by me as snake is a retro game, and coding it out seems like an interesting project to get familiar with coding.',
+            'It is built using a simple Python library, Pygame. It allows the player to have fun in a retro game.',
+            'Feel free to try it out and have fun!'
+        ],
+        repo: 'https://github.com/KevinNgWK/Snake-Game',
+    }
 ]
 
 export const contactData = {
     email: 'WNG052@e.ntu.edu.sg',
-    github: 'https://github.com/KevinNgWK',
-    linkedIn: 'https://www.linkedin.com/in/ng-wai-kit-kevin/',
+    cta: 'Would you like to work with me? Awesome!',
+    btn: 'Let\'s Talk',
 }
 
 export const EducationData = [
@@ -101,6 +118,18 @@ export const EducationData = [
         name: "Bachelor of Engineering",
         grades: "4.95/5",
         awards: ["Dean's List, Academic Year 18/19", "Dean's List, Academic Year 19/20"],
-
     }
+]
+
+export const NetworkData = [
+    {
+        id: nanoid(),
+        name: 'linkedin',
+        url: 'https://www.linkedin.com/in/ng-wai-kit-kevin/',
+    },
+    {
+        id: nanoid(),
+        name: 'github',
+        url: 'https://github.com/KevinNgWK',
+    },
 ]
