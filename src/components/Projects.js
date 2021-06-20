@@ -49,7 +49,7 @@ const Projects = (props) => {
           <Title title={"Projects"} />
           {props.projects.map((project, index) => {
             return (
-              <Fade bottom duration={800} delay={index*400} distance="30px">
+              <Fade bottom duration={800} delay={index*200 + 200} distance="30px">
                 <ProjectCard project={project} index={index}/>
               </Fade>
             )

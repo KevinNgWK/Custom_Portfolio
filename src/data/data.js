@@ -4,7 +4,7 @@ import { nanoid } from 'nanoid';
 export const PersonData = {
     introduction: 'Hi, my name is',
     name: 'Kevin Ng',
-    description: 'Welcome to my online portfolio',
+    description: 'Welcome to my online portfolio! :)',
     link: 'Know More',
 }
 
@@ -110,17 +110,6 @@ export const contactData = {
     btn: 'Let\'s Talk',
 }
 
-export const EducationData = [
-    {
-        id: 1,
-        level: "University",
-        school: "Nanyang Technological University",
-        name: "Bachelor of Engineering",
-        grades: "4.95/5",
-        awards: ["Dean's List, Academic Year 18/19", "Dean's List, Academic Year 19/20"],
-    }
-]
-
 export const NetworkData = [
     {
         id: nanoid(),
@@ -133,3 +122,40 @@ export const NetworkData = [
         url: 'https://github.com/KevinNgWK',
     },
 ]
+
+export const SkillsData = {
+    mainSkills: [
+        {
+            name: "Python",
+            percentage: "90",
+        },
+        {
+            name: "Java",
+            percentage: "80",
+        },
+        {
+            name: "JavaScript",
+            percentage: "80",
+        },
+        {
+            name: "SQL",
+            percentage: "80",
+        },
+        {
+            name: "ReactJS",
+            percentage: "70",
+        },
+        {
+            name: "Tensorflow / Keras",
+            percentage: "70",
+        },
+        {
+            name: "HTML / CSS",
+            percentage: "50",
+        },
+        
+    ],
+    otherSkills: [
+        "C", "Spark", "Unity",
+    ]
+}

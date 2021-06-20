@@ -35,7 +35,7 @@ const Experiences = (props) => {
           <Title title={"Experiences"} />
           {props.experiences.map((experience, index) => {
             return(
-              <Fade bottom duration={800} delay={index*400 + 200} distance="30px">
+              <Fade bottom duration={800} delay={index*200 + 200} distance="30px">
                 <ExperienceCard experience={experience} index={index} />
               </Fade>
             )

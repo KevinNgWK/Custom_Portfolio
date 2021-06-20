@@ -5,7 +5,8 @@ import Projects from './components/Projects';
 import Person from './components/Person';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
-import { PersonData, AboutData, ExperiencesData, ProjectsData, contactData, NetworkData } from './data/data';
+import Skills from './components/Skills';
+import { PersonData, AboutData, ExperiencesData, ProjectsData, contactData, NetworkData, SkillsData } from './data/data';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style/main.scss'
 
@@ -19,6 +20,7 @@ function App() {
   const [projects, setProjects] = useState([...ProjectsData]);
   const [contact, setContact] = useState({...contactData});
   const [networks, setNetworks] = useState([...NetworkData]);
+  const [skills, setSkills] = useState({...SkillsData})
 
   return (
     <>
@@ -26,6 +28,7 @@ function App() {
       <About about={about} />
       <Experiences experiences={experiences} contact={contact} />
       <Projects projects={projects} contact={contact} />
+      <Skills mainSkills={skills.mainSkills} otherSkills={skills.otherSkills} />
       <Contact contact={contact} />
       <Footer networks={networks}/>
     </>
